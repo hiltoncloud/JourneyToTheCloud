@@ -1,0 +1,11 @@
+#.gitignore  <-- Is a file you create that will ignore files for example if you type
+
+*.jpg <-- This will ignore all jpg files inside of your get repository
+
+
+# git log --oneline comment
+this command allows you to view the git log in a more human readable format
+
+#git checkout [branch name]
+
+this command allows you to switch between branches which are used to develop on the same repository.
