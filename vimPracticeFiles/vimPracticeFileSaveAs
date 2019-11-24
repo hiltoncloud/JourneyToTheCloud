@@ -1,0 +1,45 @@
+  In command mode you are able to move throughout the file using the jklh keys.
+
+In command mode you can type a number then a movement command to choose how many times you want to repeat that movement command.
+
+The percent sign on a bracket yo you to instantly find the end of the a closing bracket
+
+The U command is able to undo the previous command
+
+The . command yo you to repeat a command
+
+You cannot undo an Undo
+
+Y is to copy
+P is to Paste
+
+V is basically highlight mode or markmode
+
+>> yo you indent
+<< yo you unindent
+
+
+Search & Replace
+
+%s/(word you want to replace)/(with this word)/gc <-- the gc at the end means to confirm the changest each time
+
+
+External Commands
+In command use ! to start executing commands while staying inside your document
+
+Read in the results of a command GOOD FOR GETTING STUFF LIKE YOUR CURRENT DIRECTORY OR ENV VARIABLES
+
+:r ! ls -a ~/Desktop
+This would give me all the folders in my desktop inside of my document.
+
+ZZ quick exit and save
+
+Save changes and create new with the saved changes. IN COMMAND MODE TYPE :saveas [filename]
+
+
+
+
+
+
+
+
