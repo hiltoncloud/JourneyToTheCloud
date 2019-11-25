@@ -12,5 +12,23 @@
 #Internet Gateway: A combination of hardware and software that provide your private network with a route to the outside world (outside network)
 # Automatically assigned an internet gate way and vpc upon creation
 # Passes information from vpc to the internet acts like a modem basically connecting you to the outside network
-# Internet gateways cannot be detached from VPCS with EC2s or RDS databases that are ACTIVE inside of them
+# Internet gateways cannot be detached from VPCS with EC2s or RDS databases that are ACTIVE inside of them.
+												Route Tables
+# HAVING AN INTERET GATEWAY DOES NOT GIVE YOU ACCESS TO THE INTERNET.
+# A route table contains a set of rules called routes that determines where traffic is directed.
+# 0.0.0.0/0 means 'any traffic' can be directed to the destination of your choosing
+# You can have multiple rules in your route table.
+# TASK: "Create a Internet Gateway called "IGW"" , TASK: "Go inside of your route table and assign the 0.0.0.0/0 to the new internet gateway". TASK: Attach the "Custom IGW" to the default VPC.
 
+												 Sub Nets
+# Subnet is shorthand for Sub Network
+# Think of a subnet has a smaller network attached to your Internet Service Provider.
+# Public subnets have a route to the outside network (internet)
+# Private subnets do not have a path to the outside network (internet) but it has a path to other instances inside of the VPC
+# All subnets are automatically assigned to the "MAIN" route table which you can designate ut if i tnot it is already designated.
+# Subnets that are assigned to a routetable that has no "0.0.0.0/0" or no Internet gateway. These route tables may only have "locaL (inside your vpc) desitnations"
+# #TASK Create a ROUTE TABLE called Custom Route Table #TASK: ASSOCIATE TWO SUBNETS  TO YOUR NEW CUSTOM ROUTE TABLE. #TASK EXPLICITY assign the other 4 subets to our default route table.
+# Quick Note: Public Subnets have an IGW attached basically a 0.0.0.0/0. Private subnets do not.
+											Availability Zones VPC Specific
+#High Availability means if the entire zone goes out you can swap to another availability zone and everything works fine.
+#Fault tolerance is if a component in your network goes out but your network and system still works. For example imagine your internet gateway for some reason points to a black hole another igw should take over and become the new igw.

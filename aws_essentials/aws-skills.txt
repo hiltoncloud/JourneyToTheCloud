@@ -1,0 +1,7 @@
+#Skills Learned ____________________________________________________________
+1. Able to create multiple users following the best practice.
+2. Able to assign users to groups and give appropiate permissions using AWS IAM
+3. Able to assign "Roles" to AWS_Resources so they have permission to utilize other resources for example an EC2 instance having permission to utilize an S3 bucket
+4. Able to create VPC networks, Internet Gateways and Route table modificiation.
+5  Full understanding of AWS subnetworks and route tables.
+6. Able to design fault tolerant architechture.
