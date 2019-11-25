@@ -1,0 +1,24 @@
+## 											What Is AM??
+
+# IAM = Identity and Access Management
+# I AM is used to create users,groups, access policies and roles
+# Accounts created have no permissions. This does not include the root account that is created when you first make an aws account.
+
+##                                                                          IAM Initial Setup & Configuration Best Practices
+
+# Best Practices: #1: Delete root access keys ,  #2 Activate M.F.A , #3 Create a user with console or programmatic access. Set Custom Password, Attach Adminstrative Policy to the first user. 
+# 4. Create an IAM GROUP: Where you can set policies to a specific group of people, and add users to existing groups. Create a group called "[Project Name] Admins" add your main account to the project    name admins.
+# 5. Set your password requirements and rules.
+
+
+#_______________________________________________________________________I am Users and Policies_________________________________________________________________________________________________________
+
+#Create 3 users, Mark,Adrian,James  [User_Name], give [User_Name].
+#Tag them as Project Omega Team Developer
+#Create group talled Project Omega Team Developer
+#Give the dev  group full access to the s3 full access, ec2-full access and rds-full accesss.
+
+#___________________________________________________________________________________________ IAMROLES__________________________________________________________________________________________________
+# In the IAM Dashboard create a role so that EC2 instances can access the S3 service.
+
+
