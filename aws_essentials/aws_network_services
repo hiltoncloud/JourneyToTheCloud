@@ -1,0 +1,16 @@
+#												Aws Global infrastructure
+
+# Regions are assigned to reduce latency between customers.
+# Availabilty zones are physical data centers inside of regions. Regions have multiple availablity zones.
+
+												Virtual Private Cloud
+# A VPC is a private subsection of aws that the admin controls and you can determine what resources go inside of the VPC as well as who gets to use those resources.
+# Network Access Control List (NACL) acts as the firewall for VPCS, Most websites operate on port 80 or 443 so if you needed your EC2 to scrap and pull from the web youd need to allow access to those ports.
+# Subnets by default can talk to each other upon creation
+
+												Internet Gateways(IGW)
+#Internet Gateway: A combination of hardware and software that provide your private network with a route to the outside world (outside network)
+# Automatically assigned an internet gate way and vpc upon creation
+# Passes information from vpc to the internet acts like a modem basically connecting you to the outside network
+# Internet gateways cannot be detached from VPCS with EC2s or RDS databases that are ACTIVE inside of them
+
