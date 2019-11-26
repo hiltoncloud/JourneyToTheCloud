@@ -1,0 +1,44 @@
+#											S3 Storage Basics
+# An Online Bulk Storage service you access from any device. Basically an ONLINE HARDRIVE
+# S3 = Simple Storage Services *lol s3 cause there are three letter S's.
+# Buckets are the root level folder, inside of the buckets you have s3 folders and inside you have an s3 Object / File.
+# TASK: Create an s3 Bucket, Unique Names Only s3 is a global service: CustomTerry. Enable service access logging, #Add Tags. Block all public access in your s3.
+# Task: Create a Folder inside of your S3 Bucket,
+# SOME SERVICES ONLY WORK IF THEY ARE IN THE SAME REGION KEEP THAT IN MIND WHEN DESIGNING AWS ARCHItechture.
+											Storage Classes
+# Each object in S3 has a storage class
+# (Standard) is the default storage class for s3
+# You can change the storage class at anytime
+# Standard is the most expensive of the s3 storage classes.
+# (Intelligent Tiering): Designed for objects with frequently changing or unkown access patterns. Its like scaling for buckets, it will move the buckets that are not being used often to infrequent use.
+# (Standard and Frequent Access): Designed for objects you do not access frequently but must be available fast when you need it. Less expensive for standard storage
+# One Zone-Infrequence Acess
+# Glacier: LONG TERM ARCHIVAL STORAGE, TAKES SEVERAL HOURS TO RETRIEVE. LOW COST S3 STORAGE.
+											
+											Durability vs Availability
+# Durability: The odds that you will lose a file is 0.000001% basically 1 file every 10 million years
+# Availability: The odds the file will be available
+
+											Side Notes:
+# Standard = Good for objects that accessed frequently
+# Intelligent Teiring: good for changing data thats accessed
+# Standard-Inrequent Acess: Designed for files that youd ont access frequently
+# Glacier: Archives and BackUps Disaster Recovery
+
+											Object Lifecycles Policies.
+# An object life cycle is a set of rules that automate the migration of an objects storage class to a different storage class. or its deletion based on specific time intervals.
+# You can apply life cycle policies to the entire bucket, folders, or objects with the folders of the bucket.
+# A minium requirement of 30 days is required for the automatic transition.
+# Task Create a life cycle for your s3 bucket folder/file for standard frequent access 30 days and then glacier after 90
+
+											S3 Permissions
+# S3 permissions are what allow you to have ganular control over who can view access and use specific buckets and objects within the bucket.'
+# Bucket level Permissions and Object level permissions.
+# You can share a link to an object to anyone in the world
+# Just because a team has access to s3 DOES NOT MEAN they can access every bucket, you have to enable public access and click "list" they will allow access for the WORLD not just the dev team to your file. 
+# Even if you give an entire bucket public access, they still may not have access to all objects inside of the bucket. In order to fix that go to the specific object and allow permissions for the object to be viewed. 
+# Task Make the bucket public
+											s3 Object Versioning
+# Keeps tracks of versions of files. Versioninig is not automatically enabled and you have to enable it yourself. Once enabled you cannot disabled it only suspend it. It will keep all previous versions fo the object but prevent new ones from being created.
+
+#Task Turn on s3 versioning for 1 object
