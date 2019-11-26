@@ -1,0 +1,49 @@
+#												Elastic Cloud Compute (EC2)
+# Simple def: A computer on the AWS cloud.
+# Operating system on EC2 = Amazon Machine Images or AMIS
+# Instance Type = Process Powers (Free Tier)
+# EBS Elastic Block Storage = Local Storage
+# Network Access: Virtual Network Adapter gives us an IP ADDRESS
+# Security Groups: Behave Like a fire wall or Network Access Control List
+# Ram The same which is the memory of the EC2
+
+^ These are the components of the EC2.
+
+# 													Types Of Billing
+# On Demand: Only charged when the instance is running.
+# Reserved Instance: Purchase an instance for a set period of time you get a discount but your locked into the pricing.
+# Spot Pricing: Bidding On instance you only pay when the insntance is below or at your bid price. Charged by the minute.
+
+													Amazon Machine Image
+# AMI is a preconfigured package required to launch a system that includes application,settings,software that you want inside of your image.
+# ONE AMI can launch many EC2 instances this could be useful for quick scaling and bootstrapping.
+# Community AMIS: Free to use , Generally with these AMIS you are just selecting the Operating System you want.
+# AWS Marketplace AMIS: - Pay to use, Come packaged with additonal, licensed software
+# AMI's you create yourself
+#													Instance Types
+# Instance = Central Processing Unit or CPU
+# Each instance has different capabilities its basically the power of the cpu
+													Elastic Block Storage
+# EBS is a storage volume for an EC2 instances = equivalent to a hard drive
+# IOPS = input and outputs. This means reading, writing and retrieval  of the data to the EBS storage. You can get faster "Input and Outputs or IOPS" Input and outputs per second.
+# EBS volume size determines the amount of IOPS. So bigger EBS, is also faster EBS.
+# EC2s start off with a root volume that is inside of the computer. If you delete the ec2 u also delete the ebs block unless u uncheck the delete on termination block.
+# Additional volumes created are not deleted on termination of the ec2 instance
+# Snap shots are backups of your EBS volumes.
+
+												Security Groups
+#Define: Security groups are similar to NACL, The difference is they are found on the "instance level" instead of the subnet level. Basically A firewall on the instance level.
+#Security groups dont have numbers assigned to the rules. You also cannot create adn deny rules in the security groups.
+#All inbound traffic is auto denied, All outbound traffic is allowed.
+#Create a new security group and allow HTTP Web traffic.
+#Security Group: Stateful any traffic that comes in is allowed to go outpound
+#NACLS: Stateless without an outbound rule the trafiic would not be allowed to leave.
+
+												IP ADDRESSING
+# Providing an EC2 Instnace with a Public IP. A Public IP is NECCESSARY so that your ec2 instance can communicate with the internet.
+# All EC2 Instances have private IPS, private ips allows your ec2 to communicate with all other instances inside your vpc by default.
+# If you create a new vpc or subnet you have to enable public Ip address
+# Task: Create an instance, inside the additional steps update the instance. #!/bin/bash;yum update -y; yum install -y httpd; service httpd start;
+# Task: SSH: TCP Protocol, Portrange 22. Then allow webserver traffic through the HTTP by adding a service.
+# Connect to EC2 instance using the domain service name which is a place holder for the ip address.
+# ifconfig checks your network settings.
