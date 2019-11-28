@@ -1,0 +1,58 @@
+					Databases
+Databases: Allow you store information, querey the information.
+
+Databases: Should always be inside of its own private subnet.
+
+				RDS vs Dynamo Db Basics
+
+RDS: Relational DBS (SQL DATABASE)
+RDS is a sql database service that provides a wide range of sql.
+RDS database have engines: MYSQL.mariadb,postsql.poracle,microsoft sql
+
+
+Dynamo DB: (No Database)
+: No other database types, no sql database service
+: Used for quick access.
+
+
+Difference between databases:
+MYSQL: Stores data into column and rows.
+Dynamodb: unstructured json like documents
+					Pricing RDS
+The engine is related to the pricing for amazon.
+Instance type (size) will affect pricing
+On-demand is more expensive than reserved instances.
+					Pricing DynamoDB
+Provisioned throughput Capacity
+Indexed Data Storage
+DynamoDB Streams
+Reserved Capactity
+DAta Transfer in/out of Dynamodb
+					Provisioning RDS
+#1. Provision RDS DATABASES inside of private subnets with route tables with no gateway to the internet
+
+#2. Make sure EC2 has access to the RDS DATABASE through the route tables
+
+#3 EC2 needs access through port 3306 to use our RD2 in a private subnet
+
+#4 AWS MANaGEMENT console cannot connect to the RDS database
+
+#5 You have to use SSH tunneling to access rds.
+000000							
+#6 TASK: Create a database, #Task Create a subnet named database group essentials and make it private by not allowing access to the internet. #Choose two availability zones.
+
+#7 Create a new VPC security group called essential vpc security group.
+   Adjust backup days to 0 days.
+   Unenable deletion protection.
+
+#8 Endpoint is used to ssh into database
+
+#9 Open your VPC security group, check the inbound rules on your database security group. Allow all traffic via ssh, allow all traffick via mysql, allow all traffic via 0.0.0.0.
+
+#10 Outbound = All Traffick allowed, Check Essential Security Group Same rules
+
+#11 Connecting to MYSQL: You need to use a third party application, download myssql work bench. SSH HostName, SSH Username, SSH KeyFile, Port 3306, Test Connection
+
+#12 In mysql create a connection can connectiondb, method is standard tcp over ssh, copy the ip address of your hostname, username ec2-user, upload your keypair, your end point is the hostname, username: admin, password: that you used when creating the database. 
+
+
