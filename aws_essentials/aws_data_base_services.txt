@@ -53,6 +53,5 @@ DAta Transfer in/out of Dynamodb
 
 #11 Connecting to MYSQL: You need to use a third party application, download myssql work bench. SSH HostName, SSH Username, SSH KeyFile, Port 3306, Test Connection
 
-#12 In mysql create a connection can connectiondb, method is standard tcp over ssh, copy the ip address of your hostname, username ec2-user, upload your keypair, your end point is the hostname, username: admin, password: that you used when creating the database. 
-
+#12 In mysql create a connection can connectiondb, method is standard tcp over ssh, copy the ip address of your hostname, username ec2-user, upload your keypairyour end point is the hostname, username: admin, password: that you used when creating the database. 
 
