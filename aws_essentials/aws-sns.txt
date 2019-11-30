@@ -1,0 +1,25 @@
+			Simple Notification Service
+
+SNS: Allows you to automate the sending of email or text message notification. Based on evens that happen in your AWS account.
+
+Publishers: Produce sending messages to a topic.
+
+Subscribers: Consume or recieve messages from publishers.
+
+Cloud Watch: Detects problems and can alert who ever you have tilted.
+
+Topic: How you label and group different endpoints that you send message to. End points are the destinations.
+
+Subscriptions: Are the endpoints that a topic sends messages to.
+
+Charge: Your charged by the amount of messages you send out and how much data is transfered in and out. No charges when sent to lamba.
+
+# For billing alarms you can only use emails as your end point
+
+# this allow you alert other services or yourself. 
+
+# End points are the services or person that recieves the message.
+
+# Events can send out messages to subcribers as well.
+
+

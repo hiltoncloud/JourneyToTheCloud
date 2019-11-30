@@ -55,3 +55,4 @@ DAta Transfer in/out of Dynamodb
 
 #12 In mysql create a connection can connectiondb, method is standard tcp over ssh, copy the ip address of your hostname, username ec2-user, upload your keypairyour end point is the hostname, username: admin, password: that you used when creating the database. 
 
+#13 Interpolation for workbench connection: SSH Hostname: Host Computer Ip or Ec2 Instance I.P; SSH Username: ec2-user or the name you designated. SSHKEY FILE ALWAYS or password to the ec2 instance. Hostname: End Point from database tab. Username: What you set when you created db. Password: whatever you made.
