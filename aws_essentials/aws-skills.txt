@@ -7,4 +7,5 @@
 6. Able to design fault tolerant architechture.
 7. Configured a webserver with apache.
 8. Able to launch EC2 instances and assign it to appropriate vpcs,subnets
-9. Full working knowledge of S3 storage service. Creating life cycle policies to meet company needs and maintain low cost effiency
+9. Full working knowledge of S3 storage service. Creating life cycle policies to meet company needs and maintain low cost effiency.
+10. Database knowledge, sql work bench.
