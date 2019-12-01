@@ -1,0 +1,20 @@
+													Cloud Watch & Cloud Trail
+They are aws management tools.
+Cloud Watch: Is a service that allows you to 'monitor' various elements of the aws account. So basically watching the other services like ec2 rds and s3.
+
+Cloud Watch Alarm: Can make changes to resources or send alarm base on rules that we define.
+
+Cloud Watch Dashboard: You can monitor thresh hold and metrics about specific service.
+
+Create a dashboard for your EC2 Instance usage, using cloud watch.
+
+Create an Alarm based on EC2 - Computing power.
+
+You can monitor the state of an instance as well`
+												Cloud Trail: 
+Cloud Trail: Is a service that allows you track various action taken on the aws account. Tracking creation and deletion through services and roles. BASICALLY a dashboard log on aws. So its like looking through log files but more organizes. It checks to see who took actions on an account.
+
+
+cloud trail; Creates gzip files of the events that occur in your aws account. It then converts the files into a gzip and stores into an s3 bucket of your choice or the creates one by default.
+
+

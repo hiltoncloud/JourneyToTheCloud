@@ -1,0 +1,12 @@
+												Auto Scaling
+Autoscaling scales in and out, not up and down as stated in the video. Scaling in and out adds and removes additional instances as needed. Scaling up and down would add additional resources like meoryh or disk space to an existing instance.
+
+Autoscaling works in groups.
+
+												Two Components to Auto Scaling
+
+Launch configurations: The EC2 template used when auto scaling needs to add an additonal server to your auto scaling group.
+
+Auto Scaling Group: All the rules and settings that govern when an EC2 server is automatically added or removed.
+
+Launch configuration: is found in ec2 launch configurations. 1. Select an AMI, 2. Select an Instance Type, 3. Create Launch configuration give it  a name. Make sure that a public address will be assigned. WITH NO PUBLIC IP THERE WONT BE A WAY FOR THE Other services to reach it. 
