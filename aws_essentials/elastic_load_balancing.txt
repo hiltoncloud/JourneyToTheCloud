@@ -1,0 +1,17 @@
+												Elastic Load Balancer:
+Scalability: Allows you to create or delete provisions based on demand.
+
+
+Elasticity: Allows you to increase the performance or decrease the performance of a service based on demand.
+
+Elastic Load Balancer Definition: An ELB evenly distributes traffic between ec2 instances that are associated with the Elastic load balancer.
+
+IT will only route traffic to healthy service. 
+
+The Instances have to be in different availability zones.
+
+The ELB listens on port 80 through the http protocol
+
+When setting up ELB the best practice is to add additonal security with https on port 443. When setting up the routing of your elastic load balancer you want to make sure you monitor the target type. Target type is basically what component you want to use to identify the ec2 you can do "instance".
+
+ 

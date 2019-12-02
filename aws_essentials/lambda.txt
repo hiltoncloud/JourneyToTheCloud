@@ -1,0 +1,19 @@
+						Lambda
+
+Allows you to create application code.
+
+Lamba is serverless computing. It is the next generation of cloud computing that will replace ec2 instances.
+
+Lambda performs all of the adminstration of the compute resources,infrastruutre and performs all of the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, code monitoring and logging. All WE have to do is write the code in one of the languages node.js,java,go,C# and python.
+
+						Pricing
+(1) Request toe xecute code
+(2) How long it takes to execute code
+(3) Accessing data from other AWS service/resources
+
+
+					Testing Lamba
+Testing lamba by using functions
+Create a new role with basic lambda permissions
+You can add triggers that will make your lamba function starts
+

@@ -9,4 +9,6 @@
 8. Able to launch EC2 instances and assign it to appropriate vpcs,subnets
 9. Full working knowledge of S3 storage service. Creating life cycle policies to meet company needs and maintain low cost effiency.
 10. Database knowledge, sql work bench
-11. Working Knowledge of AWS SNS Services.
+11. Working Knowledge of AWS SNS Services
+12. Working knowledge of auto scaling
+13. Working knowledge of Route 53 services

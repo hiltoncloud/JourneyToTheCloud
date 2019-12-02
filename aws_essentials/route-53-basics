@@ -1,0 +1,27 @@
+					Route 53	
+Route 53 is where you configure and manage web domains for websites or applications
+
+Domain Registration
+
+Domain Name System Service: Converts domain names to I.Ps
+
+Health Checking: Aws sendings network checks to your web server to make sure its healthy.
+
+an A record is what resolves your hostname on other peoples computers. You need to create two records one record with the "www.terryhilton.com" and another with just "terryhilton.com" so both names can be resolved.
+
+Routing Policy simple.
+
+Always check evaluate target help.
+
+Your alias target needs to be your Elastic Load Balancer.
+
+
+					Cloud Front
+
+Cloud front replicates data, video and application around the world to reduce latency, so that access to these resources is fast for the people who will use them.
+
+Cloud front needs to be able to access the files inside of your s3 bucket, so you need to make those specific files public so cloud front can replicate them.
+
+Probably have a whole bucket dedicated to cloud front tbh or folder.
+
+Cloud front caches data in edge location.
