@@ -1,0 +1,19 @@
+					Give Terraform Permission
+
+#1: Add user called terraform and grant it programmatic access
+#2: Attach adminstrative access to the user called terraform
+#3: Download the .csv credentials
+
+
+					Add Credentials To Server
+#4: Create a new profile with  Run aws configure --profile "cloudwarrio.r"
+#5: Use the file you downloaded in step 3 to enter the credentials
+#6: Enter the region name choose the one your ec2-instance is using
+#7: Default output can be none.
+#8: Run "aws ec2 describe-instances --profile "terrythecloudwarrior"
+					
+					Setting Up The DNS
+#9 aws route53 create-reusable-delegation-set --caller-reference 1234 --profile terrythecloudwarrior
+
+#10 Copy and paste the code to a txt file.
+#11 
