@@ -1,0 +1,84 @@
+				Access Management Basics
+
+1. A person or application that can make an authenicated or anonymous request to perform an action on a system
+
+2. Authentication: The process of authenicating a principal against an identity this could be via username or password or API KEYs.
+
+3. Identity: Objects that require authenication are authorized to acesss resources.
+
+4. The process of ehcking and allowing or denying access to a resource for an identity.
+
+				Shared Responsibility / Security Model
+
+1. This model is the definition of who is responsible for what part of the security because it is "shared".
+	AWS is responsible for software,compute,storage,database,network ANY HARDWARE AND GLOBAL INFRASTRUCUTRE. Regions and Availability Zones Edge Locations.
+
+
+Customers: Are responsible for Customer Data, Platform,Application,Identitty and Access Management, Operating System, Network and firewall configurations. Encrytpion - At Rest and in Transit and Network Protection.
+
+				Service Models
+
+1. Infrastructure as a service
+	a. Is responsible for any data not data centers,application,runtime and operating system. 
+2. Platform as a Service
+	a. Only responsible for the Data and Application.
+3. Software as as service
+	a. Netflix,Gmail,Hbo are all examples of software as a service
+
+				System Stack
+Any system you design looks like this
+1.Data Center 2.Network & Storage 3. Host/Servers 4. Virtualization 5.Operating system 6. Runtime. 7. Application. 8.Data
+
+				High Availability vs Fault Tolerance
+High Availability: Hardware,software and configuration allowing a system to recover quickly in the event of a failure.
+			-Goals is to recover failure from failure
+			-Reduce down time.
+Fault Tolerance: System designed to operate through a failure with no user impact. More expact and complex to achieve.
+			-Prevent Failrue
+
+			 Recovery Point Objectives
+How much a buisness can tolerate to lose. expressing in time. The maxium time between a failure and the last successful backup.
+
+			 Recovery Time Objectives
+The maxium amount of time a system can be down. How long a solution takes to recover.
+
+			 Recovery Example
+If your automated backup of your system is generated every 8:00am and you have a disaster that occurs at 9:00am that means youve only lost 1 hour of data which coorelates to recovery point objective. If your doing a backup everyhour your recovery point is everyhour from your current time. You need to keep in mind how long it takes to provision your systems using automated scripts. This is your "RTO" how long it takes you to recover the system and provision it for use.
+
+			Scaling
+Vertical scaling: is achieved by adding additional resources in the form of cpu or memory to an existing machine. By doing so, the machine is able to service additional customers or perform compute tasks quicker. Eventually, maximum machine sizes will constrain your ability to scale - either technically or from a cost perspective.
+
+Horizontal scaling: Is achieved by adding additonal machines into a pool of resources, each of which provide the same service. Horizontal scaling suffers none of the size limitations of vertical scaling and can scale to nearly infinitie leels but requires application support to scale effectively.
+
+			Which is better?
+Horizontal Scaling: Is the better solution because 1 you spread the risk accross multiple instances or machines and you can scale as far out as you want to regardless of your load. You also can do multiple small machines and scale down instead of constantly spinning up a bigger machine or smaller machine with vertical scaling.
+
+			Tier Application Design
+Architecturally, applications consist of three tiers; the presentation tier, which interfacts with the consumer of the application, the logic tier, which delievers the application functionality and the data tier which controls interaction with a database of some kind. If these tiers are implemented in the same code and not seperated we refer to it as a "monolothic application/ A monolotihic application is hard to scale and generally has to be done ertically.
+
+Application if designed correctly, implment the tiers as "isolated components" Architecturally, these can be provisioned on seprate machines or pools of machines. As each tier has a differeing demand on cpu,memory, disk input and output. It allows each tiers performance to be managed independently
+.\
+
+				Encryption
+Encryption is the process of taking plaintext and vonerting into ciphertext and converting ciphertext into plaintext. Plain text and ciphertext can be text.images or any other data
+
+Encryption generally uses an algorithm and one or more key it is commonly used to encryot data at rest or in transit.
+
+The process can symmetrical where the same key is used for encryption and decryption or asymmetrical where different keys called public and private keys are used.
+
+				Architecture Odds and Ends
+Cost-effective architecture
+implementing a solution within AWS using products or product features that provide the required service fpor as little intiial and ongoing cost as possible. Using your funds effectively and knowing if product "x" is better or worst than product "y" for a given solution.
+
+Secure architecture
+In a systems architecture context, implementing a given solution that secures data and operations as mushc as possible from an internal or external attack.
+
+Application session state
+Data that represents what a customer is doing what they have chosen or what they have coonfigured. Examples include items and quanitities in a shopping cart, notes on a X -ray, and 3D positions of real-time heart scans. Session state can be stored on a server (stateful server) or externally to a server (stateless server)
+
+Stateless server is prefered because you can scale it, its similar to not wanting to build a monolith program.
+
+Undifferentiated heavy lifting: A part of an application, system or platform that is not specific to your business. Allowing a vendor (AWS) to handle this part frees your staff to work on adding direct value to your customer
+s.
+
+

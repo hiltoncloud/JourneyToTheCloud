@@ -1,0 +1,12 @@
+				Takeways
+Docker uses client-server architetcure, the client talks to the daemon
+The daemon is responsible for building running and distrubuiting docker containers
+
+The daemon and the client communicate through Unix Sockets or Network interface
+
+dockerd is the docker daemon that listens for docker objects.  The docker client is how we interract with the client.
+
+Docker registries stores docker images.
+Dockerhub is a public registry.
+
+
