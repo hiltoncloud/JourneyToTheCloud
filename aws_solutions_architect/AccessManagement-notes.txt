@@ -81,4 +81,50 @@ Stateless server is prefered because you can scale it, its similar to not wantin
 Undifferentiated heavy lifting: A part of an application, system or platform that is not specific to your business. Allowing a vendor (AWS) to handle this part frees your staff to work on adding direct value to your customer
 s.
 
+				AWS ACCOUNT
+Isolated Blast Radius: When one account credentials is linked it only effects that one account. Its important to set this up during your development of the system.
 
+Accounts can be linked and configured to allow consolidated billing where "Master" account is charged for all member account resource usage. <-- GOOd for generating one report. Good for buisness clarity.
+
+
+				Physical and Network Layer
+Regions contain multiple availibility zones, which are seperated and isolated networks. A failure in one AZ generally wont impact another.
+
+AZs in the same region are connected with redundant, high speed low altency network connections. 
+
+Most AWS services run within AZs. Same series operate from one AZ while others replicate between Azs. Some services allow you to choose the AZ to use and some dont. 
+
+Edge locations are small pockets of AWS compute,storage and networking close to major populations and are generally used for edge computing and content delivery.
+
+Point of presence is a place where users can benefit from data being stored and delivered from a point closer to them geopgraphically.
+
+			       Well-Architected Framework
+
+The AWS WELL-ARCHITECTED framework documents a set of foundtaionl questions that allow you to understand if a sepcific architecture aligns well with cloud best practices. The framework provides a conistent approach to evauluating systems against the qualities you expoect from modern cloud based systems, and the remediation tha twould be reuqired to acheieve those qualitise. As AWS continues to evolve and we continue to learn more from working with our customers, we will continue to refine the definiton of well-architected.
+
+Operation Excellence: The ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.
+
+Security: The ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+
+Reliability: The ability of  asystem to recover from infrastructure or service disruptions, dynamically acquire disruptions such as misconfigurations or transient network issues.
+
+Performance Efficiency: The ability to use computing resources efficiently to meet system requirements, and to maintain that efficiency as demand changes and technologies evolve.
+
+Cost Optimization: The ability to run systems to deliver business value at the lowest price point.
+
+Component: is the code, configuration and aws resources that together deliver a requirement.
+
+Workload: A set of components that deliver buisness value.
+
+Milestones: Mark key changes in your architecture as it evolves throughout the product life cycle (testing,going live, and in production)
+
+
+Technology Portfolio: is a collection of worklaods that are required for the buisness to operate
+
+				Elasticity:
+
+Traditional legacy system use vertical scaling. an attempt is made to forecast demand and purchase servers ideally before the damnd passes the currency capacity. Purchase too early and capacity is wasted. Purhcase too late and performance is impacted.
+
+When horiziontal scaling is used more smaller servers capacity can be maintained closer to demand. There is laste waste because servers are smaller and there is less risk of performance impact as each increase is less expensive so it generally return less approval.
+
+Elasticity or elastic scaling is where automation and horizontal scaling are used in conjuction to match capacity with deamdn. Demand is rarely so linear - it can increase or decrease often as a rapid and suddent way. An efficient platform should scale OUT and IN matching demand on that system.
