@@ -128,3 +128,53 @@ Traditional legacy system use vertical scaling. an attempt is made to forecast d
 When horiziontal scaling is used more smaller servers capacity can be maintained closer to demand. There is laste waste because servers are smaller and there is less risk of performance impact as each increase is less expensive so it generally return less approval.
 
 Elasticity or elastic scaling is where automation and horizontal scaling are used in conjuction to match capacity with deamdn. Demand is rarely so linear - it can increase or decrease often as a rapid and suddent way. An efficient platform should scale OUT and IN matching demand on that system.
+
+				Console Tour and Navigation
+S3 and IAM are global services and are consistent across all regions. Thats what its called global.
+
+View All Alerts = Things that will affect your account or other account it allows you to see the eprsonal health dashboard.
+
+				Introduction To S3
+
+Simple Storage Service s3 is a global object storage platform that can be used to store objects in the form of text files, photos,audio,movies, large binaries, or other object types.
+
+- Similiar to a file
+- Has a key: [name and value [date]]
+- con contain 0bytes and up to 5tb
+- has a unique name in a bucket FROM EVERY BUCKET IN EXISTENCE on aws.
+
+
+S3 does not create folders it just creates objects that represents folders.
+Buckets are digitally flat structures meaning it cannot have multiple levels folders represents hieracys or multiple levels.
+
+You cant have similar file names on the same level of hieracy
+
+Meta Data allows you to be attach additional information to objects inside of your s3 bucket.
+
+S3 can tolerate large amounts of failure and it scales.
+S3 allows you share data between multiple services.
+S3 is object storage NOT BLOCK STORAGE.
+
+				Cloud Formation
+Cloudformation is an infrastructure as code product you can create manage and remove infrasfrcture using json or yaml. So this is basically terraform.
+
+You can create templates in json or yaml. Templates can create infrastrcutre like ec2 or s3 storage.
+
+Cloudformation is effective if you frequently deploy the same infrastructure or you require guranteed consistent configuration.
+
+1. Starts with a template. Which json and yaml it defines resources and specifies configuration options
+
+2. Stacks are created and modified based on templates, which can be changed and used to updat a stack.
+
+the only part of the template that is ALWAYS mandatory is the "RESOURCES".
+
+Logical Resources are the virtual version of the "Physical resource" so for example the virtual S3 is a physical USB or Storage device.
+
+A STACKS JOB IS TO CREATE PHYSICAL RESOURCE BASED ON THE LOGICAL RESOURCES!
+
+Updating Stacks can cause interruptions for example if you change the size of ec2 resources it will have to restart the resources without any disruption. 
+
+If your adding taggs to something that wont require any disreuption ebcause your just adding tags.
+
+
+

@@ -1,0 +1,21 @@
+					s3
+- Bucket names have to be globally unique
+- Minimum of three and maximum of 63 characters no uppercase or underscores
+- Must start with a lowercase letter or number and cant be formatted as an IP addres(1.11.1)
+- Default 100 buckets per account, and hard 1,000 bucket limit via support request
+- Unlimited Objects in buckets
+- Unlimited total capacity for a bucket
+- An objects key is its name
+- An objects value is its data
+- An object size is from 0 to 5TB
+
+					Cloud Formation
+
+A CFN template is written in Json or YAML
+A template can create up to 200 resources
+If a stack is deleted then by default any resource it has created are also deleted
+A Stack can be updated by uploading a new version of a template
+New logical resources cause new physical resources
+Removed logical resources cause the stack to delete physical resources
+Changed logical resources update with some disruption or replace physical resources.
+
